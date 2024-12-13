@@ -55,4 +55,26 @@ This project demonstrates how to use:
       ```bash
         http://localhost:5556
       ```
+## 🚀 API Endpoints
+
+**POST /generate_report**
+
+**This endpoint creates a task to generate a report.**
+
+**Example of a request:**
+
+```bash
+curl -X 'POST' 'http://localhost:8000/generate_report' -H 'accept: application/json'
+```
+
+**Example response:**
+
+```bash
+{
+  "report_id": "5335b923-3149-4684-a726-0c7eccd8c523",
+  "status": "Task submitted"
+}
+```
+
+
 
