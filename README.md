@@ -76,5 +76,35 @@ curl -X 'POST' 'http://localhost:8000/generate_report' -H 'accept: application/j
 }
 ```
 
+**GET /report-status/{report_id}**
+
+**This endpoint checks the status of the task execution.**
+
+**Example of a request:**
+
+```bash
+curl -X 'GET' 'http://localhost:8000/report-status/5335b923-3149-4684-a726-0c7eccd8c523' -H 'accept: application/json'
+```
+**Example response:**
+
+```bash
+{
+  "status": "completed",
+  "file": "/download/5335b923-3149-4684-a726-0c7eccd8c523"
+}
+```
+
+**Sample answer (if the task is still in progress):**
+
+```bash
+{
+  "status": "in progress"
+}
+```
+
+## 🔧 Logging
+Logging is done via the standard Python logging module, and all logs can be viewed in the terminal or in the Docker container logs.
+
+
 
 
